@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENGLISH জানালা </title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<script src="https://kit.fontawesome.com/1eb9e743ba.js" crossorigin="anonymous"></script>
+
+<style>
+    .active{
+    background: #422AD5;
+    color: white;
+}
+</style>
+
+</head>
+<body> 
+    <section class="w-11/12 mx-auto">
+        <header id="nav-section" class="hidden">
+            <nav class="flex justify-between items-center p-4 border-b-2 border-b-gray-300">
+                <div class="flex justify-center items-center">
+                    <h2 class="text-2xl font-bold">English</h2>
+                    <img  class="w-[40px]" src="assets/logo.png" alt="">
+                    <h2 class="text-lg font-medium">জানালা</h2>
+                </div>
+                <div class="flex gap-4">
+                    <div>
+                        <button class="btn border-[#422AD5] border-2 text-[#422AD5] hover:bg-[#422AD5] hover:text-white scroll-btn faq-btn"><img src="assets/fa-circle-question.png" alt="">FAQ</button>
+                    </div>
+                    <div>
+                        <button class="btn border-[#422AD5] border-2 text-[#422AD5] hover:bg-[#422AD5] hover:text-white scroll-btn lessons-btn"><img src="assets/fa-book-open.png" alt="">Learn</button>
+                    </div>
+                    <div>
+                        <button id="logout-btn" class="btn border-[#422AD5] border-2 text-[#422AD5] hover:bg-[#422AD5] hover:text-white"><img src="assets/fa-arrow-right-from-bracket.png" alt="">LogOut</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+       <section id="login-section" class="flex justify-center items-center gap-20">
+        <div class="space-y-3">
+            <h1 class="text-5xl font-bold"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
+            <p class="mt-10 text-2xl font-medium w-[720px]">
+                আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+            </p>
+            <div class="w-[320px] space-y-3">
+                <input id="username" class="border-gray-300 border-2 rounded" type="text" placeholder="user name ">
+                <input id="password" class="border-gray-300 border-2 rounded" type="password" placeholder="password is 123456"><br>
+                <button id="login-btn" class="btn bg-[#422AD5] text-white" type="submit">submit</button>
+            </div>
+        </div>
+        <div>
+            <img class="w-[734px]" src="assets/hero-student.png" alt="">
+        </div>
+       </section>
+
+
+       <section id="lessons" class="hidden">
+           <section  class="flex flex-col justify-center items-center space-y-4">
+            <div>
+                <h3 class="text-4xl font-bold"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h3>
+            </div>
+            <div id="lessonbtn-container" class="flex gap-3">
+            </div>
+           </section>
+    
+           <section id="lessonbox-container" class="mx-auto mt-4 rounded bg-slate-200 p-4 grid grid-cols-3 gap-4">
+
+            <div class="col-span-full text-center">
+                <h3 class="text-sm font-normal">আপনি এখনো কোন Lesson Select করেননি </h3>
+                <h2 class="text-3xl font-medium">একটি Lesson Select করুন।</h2>
+            </div>
+           </section>
+       </section>
+
+       <section  id="faq" class="flex flex-col justify-center items-center mt-48 space-y-10 hidden">
+        <div>
+            <h3 class="text-4xl font-bold"><span class="text-[#00BCFF]">Frequently</span> Asked Questions</h3>
+        </div>
+        <div class="w-11/12 mx-auto">
+            <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title font-semibold">what is difference between var, let, and const ?</div>
+                <div class="collapse-content text-sm">
+                    <span class="font-semibold">var:</span> Function/global scoped (not block scoped).Can be re-declared and updated in the same scope.
+                    <br>
+                    <span class="font-semibold">let:</span> Block scoped (lives inside {}).Can be updated but not re-declared in the same block.
+                    <br>
+                    <span class="font-semibold">const:</span> Block scoped.Cannot be updated or re-declared.
+                </div>
+              </div>
+              <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">Whats difference between map(), forEach(), and filter() ?</div>
+                <div class="collapse-content text-sm">
+                    <span class="font-semibold">forEach()</span> just runs a function on every item in an array, but doesn't return anything.
+                    <br>
+                    <span class="font-semibold">map()</span> runs a function on every item and gives you back a brand-new array with the results.
+                    <br>
+                    <span class="font-semibold">filter()</span> goes through each item and only keeps the ones that pass a condition, giving you a new array.
+                </div>
+              </div>
+              <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">what are arrow functions and how they are different from regular functions?</div>
+                <div class="collapse-content text-sm">
+                    arrow functions are shorter way to write a function in JavaScript.
+                    <br>
+                    Differences Between Arrow Functions and Regular Functions:
+                    <br>
+                    "this" behavior:
+                    Regular functions have their own this (depends on how the function is called).
+                    Arrow functions do not have their own this; they inherit this from the parent scope (lexical scoping).
+                    <br>
+                    Syntax:
+                    Arrow functions have a shorter, cleaner syntax, especially useful for one-liners.
+                    Regular functions are longer and can be hoisted (used before declared).
+
+                </div>
+              </div>
+              <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">How JavaScript Promises work?</div>
+                <div class="collapse-content text-sm">
+                    A Promise is like a placeholder for something that will finish later.It's either pending,success or error.
+                    "promise" to do something later and handle it with .then() or .catch().
+                </div>
+              </div>
+              <div class="collapse collapse-plus bg-gray-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">How does closures work in JS ?</div>
+                <div class="collapse-content text-sm">
+                    A closure happens when a function remembers variables from where it was created, even after that outer function is done running.
+                    It's like the inner function has a backpack, carrying those variables around.
+                </div>
+              </div>
+        </div>
+       </section>
+
+       <footer id="footer-section" class=" border-t-4 border-t-[#FFEBEB] p-20 mt-48">
+        <div class="flex justify-between items-center">
+            <div class="space-y-2">
+                <div class="flex items-center">
+                    <h2 class="text-2xl font-bold">English</h2>
+                    <img  class="w-[40px]" src="assets/logo.png" alt="">
+                    <h2 class="text-lg font-medium">জানালা</h2>
+                </div>
+                <h2 class="text-xl font-medium">ইংরেজি শিখুন সহজে</h2>
+                <h2 class="text-base font-normal">Providing ED-Tech Applications since 2025</h2>
+            </div>
+            <div>
+                <h3 class="text-base font-medium">Follow Us</h3>
+                <div class="flex mt-3 gap-3">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="assets/fb-thumb.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank">
+                        <img src="assets/youtube-thumb.png" alt="YouTube">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="assets/instagram-thumb.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.github.com" target="_blank">
+                        <img src="assets/github-thumb.png" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+        </div>
+       </footer>
+
+
+       <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+          <div id="modal_body" class=" border-sky-400 border-2 p-4 rounded-md">
+          </div>
+          
+          <div class="modal-action mt-4 flex justify-start">
+            <form method="dialog">
+            <button class="btn btn-primary">Complete Learning</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+
+    </section>
+
+    <script src="JS/json.js"></script>
+    <script src="JS/login.js"></script>
+    <script src="JS/scroll.js"></script>
+</body>
+</html>
